@@ -1,5 +1,30 @@
-// script for "skills" div (.collapsible elements turn down)
+// let body = document.getElementsByTagName("body");
+// let bodywidth = body[0].offsetWidth
+// console.log(`Body width== ${bodywidth}`);
 
+let html = document.getElementsByTagName("html");
+// let htmlwidth = html[0].offsetWidth
+// console.log(`HTML width== ${htmlwidth}`);
+if (window.screen.width >= 320 && window.screen.width <= 1000) {
+  
+  html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
+  
+  console.log(`YEAH`)
+}
+
+
+let newhtmlwidth = html[0].offsetWidth
+console.log(`HTML width== ${newhtmlwidth}`);
+
+// Our diapasones 320-1000 and 1000+
+
+console.log(`Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth }`)
+console.log(`Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth }`)
+console.log('------------')
+console.log(`Размер экрана девайса, window.screen.width=== ${window.screen.width}`)
+
+
+// script for "skills" div (.collapsible elements turn down)
 let coll = document.getElementsByClassName("collapsible");
 let i;
 
@@ -48,3 +73,4 @@ function myFunction() {
 
 
 // 
+

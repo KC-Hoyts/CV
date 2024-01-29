@@ -1,6 +1,11 @@
+html {
+  /* width: 120%; */
+}
+
 body {
     background-color: black;
-    
+    width: 100%;
+    position: relative;
 }
 
 /* header with photo, bio and skills */
