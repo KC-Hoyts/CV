@@ -107,7 +107,7 @@ body {
 
 .short-bio-and-skills-container > p {
     padding: 10px 20px 10px 50px;
-    margin: 5px 5px 5px 5px;
+    margin: 15px 5px 5px 5px;
     font-size: 150%;
 }
 
@@ -116,12 +116,15 @@ body {
     margin: 5px 5px 5px 50px;
 }
 
+
+.outside {
+  padding-left: 2%;  
+  padding-right: 3%;
+}
 /*  */
 .skills {
     display: inline-block;
     width: 100%;  
-    padding-left: 2%;  
-    padding-right: 2%;
 }
 
 
@@ -148,7 +151,7 @@ body {
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 95%;
+    width: 100%;
     border: none;
     text-align: left;
     outline: none;
