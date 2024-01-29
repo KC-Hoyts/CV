@@ -1,6 +1,8 @@
 let html = document.getElementsByTagName("html");
 if (window.screen.width >= 320 && window.screen.width <= 1000) {
-  html[0].setAttribute("style", `width: ${window.innerWidth-5}px`);
+  html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
+} else {
+  html[0].setAttribute("style", `width: ${document.documentElement.clientWidth-10}px`);
 }
 
 
@@ -9,9 +11,11 @@ let coll = document.getElementsByClassName("collapsible");
 let i;
 
 for (i = 0; i < coll.length; i++) {
+  let otherbuttonsY = coll[i].getBoundingClientRect()["y"]
+  console.log(otherbuttonsY)
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    
+
     let content = this.nextElementSibling;
     if (content.style.maxHeight){
         content.setAttribute("style", "padding-bottom: 0px;")
@@ -35,6 +39,14 @@ for (i = 0; i < coll.length; i++) {
                 };   
             };
         }
+        
+        setTimeout(function(button) { 
+          button.scrollIntoView({ behavior: "smooth", block: "start"})
+        }, 300, this);
+        
+        
+        // scroll({top: window.screen.height-coord, behavior: 'smooth'}) // document instead of widnow doesnt work!
+        
 
     }
   });

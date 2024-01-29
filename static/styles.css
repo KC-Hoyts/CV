@@ -17,7 +17,7 @@ body {
         grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
         grid-template-rows: auto;
         background-color: darkgrey;
-        border-radius: 20px;
+        border-radius: 20px 20px 0px 0px;
         position: relative;
         top:90px;
         
@@ -49,7 +49,7 @@ body {
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-template-rows: auto;
-        border-radius: 20px;
+        border-radius: 20px 20px 0px 0px;
         position: relative;
         top:120px;
         
@@ -157,6 +157,7 @@ body {
     outline: none;
     font-size: 110%;
     border-radius: 10px;
+    scroll-margin-top: 150px;
 
 }
 
@@ -209,14 +210,18 @@ body {
 .main {
     color: black;
     margin: 0px 0px;
-
+    margin-top: 16.5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     top: 11px;
-    padding-top:100px;
+    padding-top:0px;
     box-sizing: border-box;
+    margin-top: 9%;
+    border: 3px solid white;
+    border-radius: 0px 0px 0px 0px;
+
 
     
 }
@@ -224,10 +229,11 @@ body {
 .main h1{
     justify-content: center;
     width: 50%;
-    border-bottom: 5px solid white;
+    /* border-bottom: 5px solid white; */
     color: white;
     position: relative;
     left: 25%;
+
 }
 
 /* ===================================== */
@@ -235,9 +241,10 @@ body {
 .timeline {
     position: relative;
     max-width: 1200px;
-    margin: 0% 10%;
-    margin-top: -17px;
-    
+    margin: -17px 10% 10px;
+    /* margin-top: -17px; */
+    border: 4px dashed white;
+    border-radius: 20px;
   }
   
   /* The actual timeline (the vertical ruler) */
@@ -330,15 +337,21 @@ body {
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
+    .main {
+      margin-top: 16.5%;
+    }
+
     .main h1{
         justify-content: center;
         width: 70%;
-        border-bottom: 5px solid white;
+        /* border-bottom: 5px solid white; */
         color: white;
         position: relative;
         left: 13.5%;
-        margin-bottom: 2%;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        font-size: 250%;
     }
 
   /* Place the timelime to the left */
@@ -386,8 +399,7 @@ body {
 
 
 
-
-
+/* FOOTER Section */
 @media screen and (max-width: 1000px) {
 
     .footer {
@@ -398,7 +410,8 @@ body {
         background-color: grey;
         padding: 1%;
         border: 5px solid white;
-        border-radius: 10px;
+        border-radius: 0px 0px 15px 15px;
+        /* margin-top: 2%; */
         
     
     }
@@ -443,7 +456,8 @@ body {
         grid-template-rows: 100px;
         background-color: black;
         border: 5px solid white;
-        border-radius: 10px;
+        border-radius: 0px 0px 15px 15px;
+        
         margin-bottom: -20px;
         
     
