@@ -88,6 +88,7 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-
+let nav = navigator.userAgent
+check[0].innerHTML += `<br><br>Устройство: ${nav}`
 // 
 
