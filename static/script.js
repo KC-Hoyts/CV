@@ -18,10 +18,25 @@ console.log(`HTML width== ${newhtmlwidth}`);
 
 // Our diapasones 320-1000 and 1000+
 
+
+
 console.log(`Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth }`)
 console.log(`Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth }`)
 console.log('------------')
 console.log(`Размер экрана девайса, window.screen.width=== ${window.screen.width}`)
+
+
+
+let check = document.getElementsByClassName("check");
+check.innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth }<br>`;
+check.innerHTML += `Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth}<br>`;
+check.innerHTML += "-----------";
+check.innerHTML += `Размер экрана девайса, window.screen.width=== ${window.screen.width}<br>`;
+
+
+
+
+
 
 
 // script for "skills" div (.collapsible elements turn down)
