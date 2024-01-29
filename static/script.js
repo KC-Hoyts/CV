@@ -80,31 +80,23 @@ for (i = 0; i < coll.length; i++) {
 
 // When the user scrolls the page, execute myFunction
 
-let nav = navigator.userAgent;
+let nav = navigator.userAgent
 check[0].innerHTML += `<br><br>Устройство: ${nav}`;
 console.log(`type of device info: ${typeof(nav)}`);
+let deviceHeight = nav.includes("android") ? window.screen.height : document.documentElement.clientHeight;
+let justcheck = nav.includes("android") ? "ТЕЛЕФОН" : "КОМПУКТЕР ИЛИ АЙФОН";
+check[0].innerHTML += `<br><br>${justcheck}`
 
-if ("Android" in nav) {
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - window.screen.height;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-  }
+window.onscroll = function() {myFunction()};
 
-} else {
+// window.screen.height
 
-  window.onscroll = function() {myFunction()};
-  function myFunction() {
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
+function myFunction() {
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height = document.documentElement.scrollHeight - deviceHeight;
+  let scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
 }
-
-}
-
 
 // 
 
