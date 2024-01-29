@@ -1,44 +1,7 @@
-// let body = document.getElementsByTagName("body");
-// let bodywidth = body[0].offsetWidth
-// console.log(`Body width== ${bodywidth}`);
-
 let html = document.getElementsByTagName("html");
-// let htmlwidth = html[0].offsetWidth
-// console.log(`HTML width== ${htmlwidth}`);
 if (window.screen.width >= 320 && window.screen.width <= 1000) {
   html[0].setAttribute("style", `width: ${window.innerWidth-5}px`);
 }
-
-
-let newhtmlwidth = html[0].offsetWidth
-console.log(`HTML width== ${newhtmlwidth}`);
-
-// Our diapasones 320-1000 and 1000+
-
-
-
-console.log(`Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth }`)
-console.log(`Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth }`)
-console.log('------------')
-console.log(`Размер экрана девайса, window.screen.width=== ${window.screen.width}`)
-
-
-let ddEc = document.documentElement.clientWidth;
-let wiW = window.innerWidth;
-let wsw = window.screen.width;
-
-
-let check = document.getElementsByClassName("check");
-console.log(check)
-check[0].innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientHeight  === ${document.documentElement.clientHeight}<br><br>`;
-check[0].innerHTML += `Размер окна браузера с полосой прокрутки, window.innerHeight === ${window.innerHeight}<br><br>`;
-check[0].innerHTML += "-----------<br>";
-check[0].innerHTML += `Размер экрана девайса, window.screen.height=== ${window.screen.height}`;
-
-
-
-
-
 
 
 // script for "skills" div (.collapsible elements turn down)
@@ -79,17 +42,10 @@ for (i = 0; i < coll.length; i++) {
 
 
 // When the user scrolls the page, execute myFunction
-
 let nav = navigator.userAgent
-check[0].innerHTML += `<br><br>Устройство: ${nav}`;
-console.log(`type of device info: ${typeof(nav)}`);
 let deviceHeight = nav.includes("Android") ? window.innerHeight : document.documentElement.clientHeight;
-let justcheck = nav.includes("Android") ? "ТЕЛЕФОН" : "КОМПУКТЕР ИЛИ АЙФОН";
-check[0].innerHTML += `<br><br>${justcheck} and deviceHeight: ${deviceHeight}`
 
 window.onscroll = function() {myFunction()};
-
-// window.screen.height
 
 function myFunction() {
   let winScroll = document.body.scrollTop || document.documentElement.scrollTop;

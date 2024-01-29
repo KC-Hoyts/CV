@@ -323,6 +323,7 @@ body {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    border: 1px solid white;
   }
   
   /* Media queries - Responsive timeline on screens less than 600px wide */
