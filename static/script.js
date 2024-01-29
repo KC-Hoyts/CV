@@ -26,12 +26,17 @@ console.log('------------')
 console.log(`Размер экрана девайса, window.screen.width=== ${window.screen.width}`)
 
 
+let ddEc = document.documentElement.clientWidth;
+let wiW = window.innerWidth;
+let wsw = window.screen.width;
+
 
 let check = document.getElementsByClassName("check");
-check.innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth }<br>`;
-check.innerHTML += `Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth}<br>`;
-check.innerHTML += "-----------";
-check.innerHTML += `Размер экрана девайса, window.screen.width=== ${window.screen.width}<br>`;
+console.log(check)
+check[0].innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth}<br><br>`;
+check[0].innerHTML += `Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth}<br><br>`;
+check[0].innerHTML += "-----------<br>";
+check[0].innerHTML += `Размер экрана девайса, window.screen.width=== ${window.screen.width}`;
 
 
 

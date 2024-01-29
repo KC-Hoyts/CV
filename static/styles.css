@@ -117,7 +117,9 @@ body {
 /*  */
 .skills {
     display: inline-block;
-    width: 100%;    
+    width: 100%;  
+    padding-left: 2%;  
+    padding-right: 12px;
 }
 
 
@@ -144,12 +146,13 @@ body {
     color: white;
     cursor: pointer;
     padding: 18px;
-    width: 100%;
+    width: 95%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 110%;
     border-radius: 10px;
+
 }
 
 .active, .collapsible:hover {
