@@ -6,10 +6,7 @@ let html = document.getElementsByTagName("html");
 // let htmlwidth = html[0].offsetWidth
 // console.log(`HTML width== ${htmlwidth}`);
 if (window.screen.width >= 320 && window.screen.width <= 1000) {
-  
-  html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
-  
-  console.log(`YEAH`)
+  html[0].setAttribute("style", `width: ${window.innerWidth-5}px`);
 }
 
 
@@ -33,10 +30,10 @@ let wsw = window.screen.width;
 
 let check = document.getElementsByClassName("check");
 console.log(check)
-check[0].innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientWidth  === ${document.documentElement.clientWidth}<br><br>`;
-check[0].innerHTML += `Размер окна браузера с полосой прокрутки, window.innerWidth === ${window.innerWidth}<br><br>`;
+check[0].innerHTML = `Размер окна браузера без полосы прокрутки, document.documentElement.clientHeight  === ${document.documentElement.clientHeight}<br><br>`;
+check[0].innerHTML += `Размер окна браузера с полосой прокрутки, window.innerHeight === ${window.innerHeight}<br><br>`;
 check[0].innerHTML += "-----------<br>";
-check[0].innerHTML += `Размер экрана девайса, window.screen.width=== ${window.screen.width}`;
+check[0].innerHTML += `Размер экрана девайса, window.screen.height=== ${window.screen.height}`;
 
 
 
@@ -54,7 +51,7 @@ for (i = 0; i < coll.length; i++) {
     
     let content = this.nextElementSibling;
     if (content.style.maxHeight){
-        content.setAttribute("style", "padding-bottom: 0px")
+        content.setAttribute("style", "padding-bottom: 0px; width: 95%")
         content.style.maxHeight = null;
         this.setAttribute("style", "border-radius: 10px 10px 10px 10px");
     
@@ -68,7 +65,7 @@ for (i = 0; i < coll.length; i++) {
             if (coll[j].innerHTML != this.innerHTML) {
                 content_for_close = coll[j].nextElementSibling;
                 if (content_for_close.style.maxHeight != null) {
-                    content_for_close.setAttribute("style", "padding-bottom: 0px")
+                    content_for_close.setAttribute("style", "padding-bottom: 0px; width: 95%")
                     content_for_close.style.maxHeight = null;
                     coll[j].classList.remove("active"); 
                     coll[j].setAttribute("style", "border-radius: 10px 10px 10px 10px");

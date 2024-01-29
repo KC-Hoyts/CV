@@ -1,11 +1,13 @@
-html {
-  /* width: 120%; */
+@font-face { 
+    src: url('Robotomono.ttf');
+    font-family: "Roboto Mono"; 
 }
 
 body {
     background-color: black;
     width: 100%;
     position: relative;
+    font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
 }
 
 /* header with photo, bio and skills */
@@ -119,7 +121,7 @@ body {
     display: inline-block;
     width: 100%;  
     padding-left: 2%;  
-    padding-right: 12px;
+    padding-right: 2%;
 }
 
 
@@ -474,10 +476,10 @@ body {
     }
 
     .footer h4{
-        font-size: 250%;
+        font-size: 200%;
         margin: 2% 1% 2% 10%;
         text-align: right;
-        padding-top: 4%;
+        padding-top: 6%;
     }
 }
 
