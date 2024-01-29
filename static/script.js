@@ -84,8 +84,8 @@ let nav = navigator.userAgent
 check[0].innerHTML += `<br><br>Устройство: ${nav}`;
 console.log(`type of device info: ${typeof(nav)}`);
 let deviceHeight = nav.includes("Android") ? window.screen.height : document.documentElement.clientHeight;
-let justcheck = nav.includes("Android") ? "ТЕЛЕФОН" : "КОМПУКТЕР ИЛИ АЙФОН";
-check[0].innerHTML += `<br><br>${justcheck}`
+let justcheck = nav.includes("Linux") ? "ТЕЛЕФОН" : "КОМПУКТЕР ИЛИ АЙФОН";
+check[0].innerHTML += `<br><br>${justcheck} and deviceHeight: ${deviceHeight}`
 
 window.onscroll = function() {myFunction()};
 
