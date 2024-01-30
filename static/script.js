@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
   let nameHeaderHeight = document.getElementsByClassName("full-name-header")[0].clientHeight
   
   
-  let deviceHeight = nav.includes("Android") ? window.innerHeight - nameHeaderHeight : document.documentElement.clientHeight;
+  let deviceHeight = nav.includes("Android") ? window.innerHeight + nameHeaderHeight : document.documentElement.clientHeight;
     
   window.onscroll = function() {myFunction()};
   
@@ -65,4 +65,8 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("myBar").style.width = scrolled + "%";
   }
 
+  // refresh page for correct working of JS
+  setTimeout(function(){
+    location.reload();
+  }, 3000);
 }, false);
