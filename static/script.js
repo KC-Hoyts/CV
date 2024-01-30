@@ -1,3 +1,13 @@
+  // refresh page for correct working of JS
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000)  
+        
+    }
+  }
 document.addEventListener("DOMContentLoaded", function() {
 
   let html = document.getElementsByTagName("html");
@@ -65,16 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementById("myBar").style.width = scrolled + "%";
   }
 
-  // refresh page for correct working of JS
-  window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        setTimeout(() => {
-          window.location.reload();
-        }, 2000)  
-        
-    }
-  }
+
 
   console.log(`Page width: ${document.documentElement.clientWidth}`)
   console.log(`window width: ${window.innerWidth}`)
@@ -83,9 +84,9 @@ document.addEventListener("DOMContentLoaded", function() {
   let p = document.getElementById("check");
   p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth},<br><br>window screen width: ${window.screen.width}`
   // document.body.style.zoom=1.5;
-  $(document).ready(function(){
-    $('body').css('zoom','180%'); /* Webkit browsers */
-    $('body').css('zoom','1.8'); /* Other non-webkit browsers */
-    $('body').css('-moz-transform',scale(1.8, 1.8)); /* Moz-browsers */
-  });
+  // $(document).ready(function(){
+  //   $('body').css('zoom','180%'); /* Webkit browsers */
+  //   $('body').css('zoom','1.8'); /* Other non-webkit browsers */
+  //   $('body').css('-moz-transform',scale(1.8, 1.8)); /* Moz-browsers */
+  // });
 }, false);
