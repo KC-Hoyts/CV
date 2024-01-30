@@ -66,7 +66,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // refresh page for correct working of JS
-  setTimeout(function(){
-    location.reload();
-  }, 3000);
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000)  
+        
+    }
+  }
+
+  function zoomOutMobile() {
+    var viewport = document.querySelector('meta[name="viewport"]');
+  
+    if ( viewport ) {
+      viewport.content = "initial-scale=0.1";
+      
+    }
+  }
+  
+  zoomOutMobile();
 }, false);
