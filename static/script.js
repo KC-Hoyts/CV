@@ -76,14 +76,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  function zoomOutMobile() {
-    var viewport = document.querySelector('meta[name="viewport"]');
-  
-    if ( viewport ) {
-      viewport.content = "initial-scale=0.1";
-      
-    }
-  }
-  
-  zoomOutMobile();
+  console.log(`Page width: ${document.documentElement.clientWidth}`)
+  console.log(`window width: ${window.innerWidth}`)
+  let p = document.getElementById("check");
+  p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth}`
+  // document.body.style.zoom=1.5;
 }, false);
