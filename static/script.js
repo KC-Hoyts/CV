@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // PROGRESS BAR Script
   // When the user scrolls the page, fill the progress bar. (Depends from device)
   let nav = navigator.userAgent
-  let nameHeaderHeight = document.getElementsByClassName("full-name-header")[0].clientHeight
+  let nameHeaderHeight = document.getElementById("myBar").style.width
   
   
   let deviceHeight = nav.includes("Android") ? window.innerHeight + nameHeaderHeight : document.documentElement.clientHeight;
@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
   let p = document.getElementById("check");
   p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth},<br><br>window screen width: ${window.screen.width}`
-  // document.body.style.zoom=1.5;
-  // $(document).ready(function(){
-  //   $('body').css('zoom','180%'); /* Webkit browsers */
-  //   $('body').css('zoom','1.8'); /* Other non-webkit browsers */
-  //   $('body').css('-moz-transform',scale(1.8, 1.8)); /* Moz-browsers */
-  // });
+  document.body.style.zoom=1.5;
+  $(document).ready(function(){
+    $('body').css('zoom','180%'); /* Webkit browsers */
+    $('body').css('zoom','1.8'); /* Other non-webkit browsers */
+    $('body').css('-moz-transform',scale(1.8, 1.8)); /* Moz-browsers */
+  });
 }, false);
