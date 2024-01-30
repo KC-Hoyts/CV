@@ -8,6 +8,9 @@ body {
     width: 100%;
     position: relative;
     font-family: "Roboto Mono", Helvetica, Arial, sans-serif;
+    -moz-transform: scale(0.8, 0.8);
+    zoom: 0.8;
+    zoom: 80%;
 }
 
 /* header with photo, bio and skills */
