@@ -1,22 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   // refresh page for correct working of JS
-  window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        setTimeout(() => {
-          window.location.reload();
-        }, 2000)  
-        
-    }
-  }
+
 
   let html = document.getElementsByTagName("html");
-  if (window.screen.width >= 320 && window.screen.width <= 1000) {
-    html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
-  } else {
-    html[0].setAttribute("style", `width: ${document.documentElement.clientWidth-10}px`);
-  }
+  // if (window.screen.width >= 320 && window.screen.width <= 1000) {
+  //   html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
+  // } else {
+  //   html[0].setAttribute("style", `width: ${document.documentElement.clientWidth-10}px`);
+  // }
   
   
   // script for "skills" div (.collapsible elements turn down)
@@ -62,10 +54,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // PROGRESS BAR Script
   // When the user scrolls the page, fill the progress bar. (Depends from device)
   let nav = navigator.userAgent
-  let nameHeaderHeight = document.getElementById("myBar").style.width
+  let progressBarHeight = document.getElementById("myBar").style.width
   
   
-  let deviceHeight = nav.includes("Android") ? window.innerHeight + nameHeaderHeight : document.documentElement.clientHeight;
+  let deviceHeight = nav.includes("Android") ? window.innerHeight + progressBarHeight : document.documentElement.clientHeight;
     
   window.onscroll = function() {myFunction()};
   
@@ -77,12 +69,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
+  
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        setTimeout(() => {
+          window.location.reload();
+        }, 5000)  
+        
+    }
+  }
 
-  console.log(`Page width: ${document.documentElement.clientWidth}`)
-  console.log(`window width: ${window.innerWidth}`)
-  console.log(`window screen width: ${window.screen.width}`)
-
-  let p = document.getElementById("check");
-  p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth},<br><br>window screen width: ${window.screen.width}`
- 
 }, false);
