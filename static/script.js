@@ -1,3 +1,5 @@
+
+document.addEventListener("DOMContentLoaded", function() {
   // refresh page for correct working of JS
   window.onload = function() {
     if(!window.location.hash) {
@@ -8,7 +10,6 @@
         
     }
   }
-document.addEventListener("DOMContentLoaded", function() {
 
   let html = document.getElementsByTagName("html");
   if (window.screen.width >= 320 && window.screen.width <= 1000) {
