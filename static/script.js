@@ -70,16 +70,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // refresh page for correct working of JS
-
+  window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        setTimeout(() => {
+          window.location.reload();
+        }, 3000)  
+        
+    }
+  }
 
 }, false);
 
-window.onload = function() {
-  if(!window.location.hash) {
-      window.location = window.location + '#loaded';
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000)  
-      
-  }
-}
+
