@@ -79,6 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
   console.log(`Page width: ${document.documentElement.clientWidth}`)
   console.log(`window width: ${window.innerWidth}`)
   let p = document.getElementById("check");
-  p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth}`
+  p.innerHTML = `Page width: ${document.documentElement.clientWidth}<br><br>window width: ${window.innerWidth},<br><br>window screen width: ${window.screen.width}`
   // document.body.style.zoom=1.5;
 }, false);
