@@ -1,14 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-  // refresh page for correct working of JS
+
 
 
   let html = document.getElementsByTagName("html");
-  // if (window.screen.width >= 320 && window.screen.width <= 1000) {
-  //   html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
-  // } else {
-  //   html[0].setAttribute("style", `width: ${document.documentElement.clientWidth-10}px`);
-  // }
+  if (window.screen.width >= 320 && window.screen.width <= 1000) {
+    html[0].setAttribute("style", `width: ${window.innerWidth-10}px`);
+  } else {
+    html[0].setAttribute("style", `width: ${document.documentElement.clientWidth-10}px`);
+  }
   
   
   // script for "skills" div (.collapsible elements turn down)
@@ -69,15 +69,17 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
 
-  
-  window.onload = function() {
-    if(!window.location.hash) {
-        window.location = window.location + '#loaded';
-        setTimeout(() => {
-          window.location.reload();
-        }, 5000)  
-        
-    }
-  }
+  // refresh page for correct working of JS
+
 
 }, false);
+
+window.onload = function() {
+  if(!window.location.hash) {
+      window.location = window.location + '#loaded';
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000)  
+      
+  }
+}
